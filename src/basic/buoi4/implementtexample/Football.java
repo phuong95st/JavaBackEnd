@@ -1,4 +1,4 @@
-package basic.buoi4.abstractexample;
+package basic.buoi4.implementtexample;
 
 public class Football extends Ball{
     public Football(String brandName) {

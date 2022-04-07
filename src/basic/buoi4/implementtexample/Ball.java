@@ -1,4 +1,4 @@
-package basic.buoi4.abstractexample;
+package basic.buoi4.implementtexample;
 
 public class Ball implements Tossable{
     private String brandName;

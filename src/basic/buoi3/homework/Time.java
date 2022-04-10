@@ -14,6 +14,7 @@ public class Time {
         this.minute = minute;
         this.second = second;
     }
+
     public Time() {
     }
 
@@ -42,33 +43,50 @@ public class Time {
     }
 
     // method
-    public void setTime(int hour, int minute, int second){
+    public void setTime(int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
     }
-    public String toString(){
-        Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.HOUR_OF_DAY,this.hour);
-        cal.set(Calendar.MINUTE, this.minute);
-        cal.set(Calendar.SECOND, this.second);
 
-        Date date = cal.getTime();
-        return new SimpleDateFormat("HH:mm:ss").format(date);
+    public String toString() {
+//        Calendar cal = Calendar.getInstance();
+//        cal.set(Calendar.HOUR_OF_DAY,this.hour);
+//        cal.set(Calendar.MINUTE, this.minute);
+//        cal.set(Calendar.SECOND, this.second);
+//
+//        Date date = cal.getTime();
+//        return new SimpleDateFormat("HH:mm:ss").format(date);
+
+        return String.format("%02d:%02d:%02d", this.hour, this.minute, this.second);
+
     }
 
-    public Time nextSecond(){
-        return new Time(this.hour, this.minute, this.second+1);
+    public Time nextSecond() {
+        return new Time(this.hour, this.minute, this.second + 1);
     }
-    public Time previousSecond(){
-        return new Time(this.hour, this.minute, this.second-1);
+
+    public Time previousSecond() {
+        return new Time(this.hour, this.minute, this.second - 1);
     }
 
     // main method
     public static void main(String[] args) {
-        System.out.println(new Time(23, 2, 3).toString());
-        System.out.println(new Time(23, 2, 3).nextSecond().toString());
-        System.out.println(new Time(23, 2, 3).previousSecond().toString());
+        System.out.println(new Time(1, 2, 3).toString());
+        // time 2
+        Time time2 = new Time(4, 5, 6);
+        System.out.println(time2.toString());
+        System.out.println("Hour: " + time2.getHour());
+        System.out.println("Minute: " + time2.getMinute());
+        System.out.println("Second: " + time2.getSecond());
+        time2.setTime(23, 59, 58);
+        System.out.println(time2.toString());
+        System.out.println(time2.nextSecond().toString());
+        time2.setTime(0, 0, 0);
+        System.out.println(time2.nextSecond());
+        System.out.println(time2.toString());
+        time2.setTime(23, 59, 58);
+        System.out.println(time2.toString());
     }
 
 }

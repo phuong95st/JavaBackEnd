@@ -25,5 +25,13 @@ public class Main {
         BaseBall baseBall = new BaseBall("Base ball");
         baseBall.bounce();
         baseBall.toss();
+
+        Tossable toss = new Ball();
+        Ball ball2 = new Ball();
+
+        BaseBall ball3 = new BaseBall();
+
+        ball3.bounce(10);
+
     }
 }

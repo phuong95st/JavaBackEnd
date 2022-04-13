@@ -5,6 +5,10 @@ public class Football extends Ball{
         super(brandName);
     }
 
+    public Football(){
+
+    }
+
     // method
     public void toss(){
         System.out.println("toss Football");

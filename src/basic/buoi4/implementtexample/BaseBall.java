@@ -5,6 +5,9 @@ public class BaseBall extends Ball{
     public BaseBall(String brandName) {
         super(brandName);
     }
+    public BaseBall(){
+
+    }
 
     // method
     public void toss(){
@@ -13,5 +16,9 @@ public class BaseBall extends Ball{
 
     public void bounce(){
         System.out.println("bounce BaseBall");
+    }
+
+    public void bounce(double d){
+        System.out.println(d);
     }
 }

@@ -7,6 +7,10 @@ public class Ball implements Tossable{
         this.brandName = brandName;
     }
 
+    public Ball(){
+
+    }
+
     public String getBrandName() {
         return brandName;
     }
